@@ -19,7 +19,7 @@ DeclareGlobalVariable( "JSingularInterpreterForHomalg" );
 #
 ####################################
 
-DeclareGlobalFunction( "LaunchCASJSingularInterpreterForHomalg" );
+DeclareGlobalFunction( "LaunchCAS_JSingularInterpreterForHomalg" );
 
 DeclareGlobalFunction( "SendBlockingToCASJSingularInterpreterForHomalg" );
 

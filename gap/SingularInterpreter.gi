@@ -22,8 +22,6 @@ InstallValue( JSingularInterpreterForHomalg,
 #
 ####################################
 
-HOMALG_IO_Singular.LaunchCAS := LaunchCASJSingularInterpreterForHomalg;
-
 ImportJuliaModuleIntoGAP( "Singular" );
 
 ####################################
@@ -33,7 +31,7 @@ ImportJuliaModuleIntoGAP( "Singular" );
 ####################################
 
 ##
-InstallGlobalFunction( LaunchCASJSingularInterpreterForHomalg,
+InstallGlobalFunction( LaunchCAS_JSingularInterpreterForHomalg,
   function( arg )
     local s;
     
@@ -56,6 +54,8 @@ InstallGlobalFunction( LaunchCASJSingularInterpreterForHomalg,
     return s;
     
 end );
+
+HOMALG_IO_Singular.LaunchCAS := LaunchCAS_JSingularInterpreterForHomalg;
 
 ##
 InstallGlobalFunction( SendBlockingToCASJSingularInterpreterForHomalg,
