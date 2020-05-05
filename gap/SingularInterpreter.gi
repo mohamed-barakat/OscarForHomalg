@@ -22,7 +22,7 @@ InstallValue( JSingularInterpreterForHomalg,
 #
 ####################################
 
-ImportJuliaModuleIntoGAP( "Singular" );
+ImportJuliaModuleIntoGAP( "HomalgProject" );
 
 ####################################
 #
@@ -62,7 +62,7 @@ InstallGlobalFunction( SendBlockingToCASJSingularInterpreterForHomalg,
   function( stream, input_string )
     local result;
     
-    result := Julia.Singular.libSingular.call_interpreter( GAPToJulia( input_string ) );
+    result := Julia.HomalgProject.call_interpreter( GAPToJulia( input_string ) );
     
     stream.lines := JuliaToGAP( IsString, result[2] );
     
