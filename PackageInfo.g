@@ -11,7 +11,7 @@ SetPackageInfo( rec(
 PackageName := "OscarForHomalg",
 Subtitle := "A homalg interface to components of OSCAR using the GAP package JuliaInterface",
 Version := Maximum( [
-                   "2020.04.30", ## Mohamed's version
+                   "2020.09.03", ## Mohamed's version
                    ## this line prevents merge conflicts
                    ] ),
 

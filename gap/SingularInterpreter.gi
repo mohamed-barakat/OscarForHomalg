@@ -64,7 +64,7 @@ InstallGlobalFunction( SendBlockingToCASJSingularInterpreterForHomalg,
     
     result := Julia.HomalgProject.call_interpreter( GAPToJulia( input_string ) );
     
-    stream.lines := JuliaToGAP( IsString, result[2] );
+    stream.lines := Chomp( JuliaToGAP( IsString, result[2] ) );
     
     if result[1] then
         stream.errors := Concatenation( "error: ", JuliaToGAP( IsString, result[3] ) );
