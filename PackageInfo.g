@@ -10,11 +10,7 @@ SetPackageInfo( rec(
 
 PackageName := "OscarForHomalg",
 Subtitle := "A homalg interface to components of OSCAR using the GAP package JuliaInterface",
-Version := Maximum( [
-                   "2020.09.03", ## Mohamed's version
-                   ## this line prevents merge conflicts
-                   ] ),
-
+Version := "2021.11-01",
 Date := ~.Version{[ 1 .. 10 ]},
 Date := Concatenation( ~.Date{[ 9, 10 ]}, "/", ~.Date{[ 6, 7 ]}, "/", ~.Date{[ 1 .. 4 ]} ),
 
@@ -24,11 +20,11 @@ Persons := [
     IsMaintainer := true,
     FirstNames := "Mohamed",
     LastName := "Barakat",
-    WWWHome := "https://mohamed-barakat.github.io",
+    WWWHome := "https://mohamed-barakat.github.io/",
     Email := "mohamed.barakat@uni-siegen.de",
     PostalAddress := Concatenation(
                "Walter-Flex-Str. 3\n",
-               "57072 Siegen\n",
+               "57068 Siegen\n",
                "Germany" ),
     Place := "Siegen",
     Institution := "University of Siegen",
@@ -75,9 +71,9 @@ Dependencies := rec(
   GAP := ">= 4.8",
   NeededOtherPackages := [
                    [ "GAPDoc", ">= 1.5" ],
-                   [ "HomalgToCAS", ">= 2020.04.30" ],
-                   [ "RingsForHomalg", ">= 2020.04.30" ],
-                   [ "JuliaInterface", ">= 0.3.5" ],
+                   [ "HomalgToCAS", ">= 2021.10-01" ],
+                   [ "RingsForHomalg", ">= 2021.10-01" ],
+                   [ "JuliaInterface", ">= 0.7.1" ],
                    ],
   SuggestedOtherPackages := [
                    ],

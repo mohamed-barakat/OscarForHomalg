@@ -22,7 +22,7 @@ InstallValue( JSingularInterpreterForHomalg,
 #
 ####################################
 
-ImportJuliaModuleIntoGAP( "HomalgProject" );
+JuliaEvalString( "using HomalgProject" );
 
 ####################################
 #
