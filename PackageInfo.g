@@ -10,9 +10,11 @@ SetPackageInfo( rec(
 
 PackageName := "OscarForHomalg",
 Subtitle := "A homalg interface to components of OSCAR using the GAP package JuliaInterface",
-Version := "2021.11-01",
+Version := "2024.04-01",
 Date := ~.Version{[ 1 .. 10 ]},
 Date := Concatenation( ~.Date{[ 9, 10 ]}, "/", ~.Date{[ 6, 7 ]}, "/", ~.Date{[ 1 .. 4 ]} ),
+
+License := "GPL-2.0-or-later",
 
 Persons := [
   rec(
