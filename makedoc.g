@@ -7,12 +7,18 @@ if fail = LoadPackage("AutoDoc", "2019.04.10") then
     Error("AutoDoc version 2019.04.10 or newer is required.");
 fi;
 
+latex_preamble := """
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,matrix}
+\usepackage{faktor}
+""";
+
 AutoDoc( 
         rec(
-            scaffold := rec( gapdoc_latex_options := rec( 
-                             LateExtraPreamble := "\\usepackage{amsmath}\\usepackage[T1]{fontenc}\n\\usepackage{tikz}\n\\usetikzlibrary{shapes,arrows,matrix}\n\\usepackage{faktor}" 
-                                                        ),
-                             entities := [
+            gapdoc := rec( LaTeXOptions := rec( LateExtraPreamble := latex_preamble ) ),
+            scaffold := rec( entities := [
                                      "IO",
                                      "IO_ForHomalg",
                                      "JuliaInterface",
